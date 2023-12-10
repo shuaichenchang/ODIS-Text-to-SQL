@@ -14,11 +14,12 @@ python preprocessing.py
 
 
 ## Run ODIS with OpenAI Models
+Suport "codex", "chatgpt", "chatgpt16k", "gpt4". 
 ```
 export OPENAI_API_KEY=<your-api-key>
 ```
 
-Run Codex in Spider in the zero-shot setting
+For example, to run Codex in Spider in the zero-shot setting
 ```
 python text_to_sql.py --setting zeroshot --dataset spider --model codex
 ```
@@ -38,8 +39,7 @@ Run Codex in Spider with both out-of-domain demonstrations and in-domain synthet
 python text_to_sql.py --setting inoutdomain --dataset spider --model codex --retrieval_outdomain simsql_pred --retrieval_indomain covsql --synthetic_data synthetic_ship_codex_verified
 ```
 
-
-The output can be found in `outputs/codex/spider-dev/zeroshot/CreateTableSelectCol_normalized_limit_3`.
+The predictions can be found in `outputs/codex/spider/`.
 
 ## Run ODIS with Other LLMs 
 
