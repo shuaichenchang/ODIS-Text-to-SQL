@@ -1,0 +1,6 @@
+*.DS_Store
+data
+outputs
+data.zip
+*$py.class
+*.py[cod]
